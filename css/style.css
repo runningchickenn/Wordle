@@ -1,0 +1,7 @@
+@import 'main.css';
+@import 'footer.css';
+@import 'header.css';
+
+:root {
+  --board: #d3d6da;
+}

@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px 0 20px;
+  border-bottom: 1px solid var(--board);
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+.menu-bar {
+  width: 30px;
+  height: 30px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 735px) {
+  header {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+}

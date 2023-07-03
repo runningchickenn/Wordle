@@ -1,0 +1,28 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-bottom: 20px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 여기에만 gap을 주면  */
+  gap: 5px;
+  /* background-color: red; */
+}
+
+.board-column {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--board);
+  width: 60px;
+  height: 60px;
+}
