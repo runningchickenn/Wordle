@@ -1,4 +1,4 @@
-const answer = 'APPLE';
+// const answer = 'APPLE';
 
 let attempts = 0;
 let index = 0;
@@ -28,8 +28,17 @@ function appStart() {
     index = 0;
   };
 
-  const handleEnterKey = () => {
+  const handleEnterKey = async () => {
     let rightAnswer = 0;
+
+    // 서버의 정답을 받아오기. 비동기로 받아오기 async await
+    const response = await fetch('/answer');
+
+    //객체형태 받아온 정답. 만약 서버에서 문자열 형태로 온다면 이 과정이 필요 없음. 바로 정답으로 받으면 됨.
+    const answer_obj = await response.json();
+
+    //객체형태의 정답에서 정답 문자열만 뽑아준다.
+    const answer = answer_obj.answer;
 
     for (let i = 0; i < 5; i++) {
       const block = document.querySelector(
